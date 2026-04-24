@@ -1,0 +1,5 @@
+# attach to main session or create it
+if [ -z "$TMUX" ]; then
+  tmux has-session -t main 2>/dev/nell || ~/bin/tmux-main.sh
+  tmux attach -t main
+fi
